@@ -67,34 +67,9 @@ a {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: #f7dce5;
+  background-color: #EAD7CF;
   padding: 2rem 0;
   z-index: 999;
-}
-
-.site-nav.active {
-  display: block;
-}
-
-.nav-list {
-  list-style: none;
-  text-align: center;
-}
-
-.nav-list li {
-  margin-bottom: 1rem;
-}
-
-.nav-list a {
-  text-decoration: none;
-  color: black;
-  font-weight: 700;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .site-nav.active {
