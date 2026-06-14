@@ -25,11 +25,23 @@ a {
   color: inherit;
 }
 
+.visually-hidden, .nyhedsbrev-form .nyhedsbrev-form label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -100px;
   left: 1rem;
-  background-color: #A6216A;
+  background-color: #EAD7CF;
   color: #ffffff;
   padding: 0.5rem 1rem;
   z-index: 100;
@@ -74,6 +86,27 @@ a {
 
 .site-nav.active {
   display: block;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list li {
+  margin-bottom: 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav-list {
@@ -206,7 +239,7 @@ section p {
 }
 .guide p {
   margin-bottom: 2rem;
-  font-weight: 200rem;
+  font-weight: 500;
   font-size: 0.85rem;
 }
 
@@ -348,9 +381,6 @@ section p {
   gap: 0.5rem;
   margin-top: 1rem;
 }
-.nyhedsbrev-form label {
-  display: none;
-}
 .nyhedsbrev-form input {
   border: 1px solid #FEAA56;
   border-radius: 30px;
@@ -415,20 +445,18 @@ section p {
   }
 }
 @media screen and (min-width: 1024px) {
-   .site-header {
+  .site-header {
     display: grid;
     grid-template-columns: 180px 1fr 120px;
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
   .site-logo {
     grid-column: 1;
     justify-self: start;
   }
-
-   .site-nav {
+  .site-nav {
     grid-column: 2;
     display: block;
     justify-self: center;
@@ -440,7 +468,6 @@ section p {
     padding: 0;
     z-index: auto;
   }
-
   .nav-list {
     display: flex;
     flex-direction: row;
@@ -451,15 +478,12 @@ section p {
     padding: 0;
     margin: 0;
   }
-
   .nav-list li {
     margin-bottom: 0;
   }
-
   .burger-button {
     display: none;
   }
-
   /* HERO */
   .hero-media video,
   .hero-media img {
@@ -492,10 +516,7 @@ section p {
     width: 100%;
     margin: 0;
   }
-  .balance-content {
-    width: 100%;
-  }
-  .balance-content img {
+  .balance-image img {
     width: 100%;
     height: 520px;
     -o-object-fit: cover;
@@ -522,8 +543,8 @@ section p {
   .produkter {
     padding-top: 2rem;
   }
-  .produkter h2 {
-    margin-bottom: 15rem;
+  .produkter h1 {
+    margin-bottom: 2rem;
   }
   .produkter-grid {
     padding-top: 2rem;
@@ -531,7 +552,7 @@ section p {
     margin: 0 auto;
     gap: 4rem;
   }
-  .produkt-card img {
+  .produkt-billede img {
     width: 100%;
     max-width: 300px;
   }

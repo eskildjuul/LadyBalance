@@ -23,38 +23,37 @@
     </a>
 
     <nav class="site-nav" aria-label="Hovednavigation">
-      <ul class="nav-list">
-        <li><a href="#Produkter">Produkter</a></li>
-        <li><a href="#Faq">FAQ</a></li>
-        <li><a href="#Blog">Blog</a></li>
-        <li><a href="#Om os">Om os</a></li>
-        <li><a href="#Kontakt os">Kontakt os</a></li>
-      </ul>
+     <ul class="nav-list">
+    <li><a href="#produkter">Produkter</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#om-os">Om os</a></li>
+    <li><a href="#kontakt">Kontakt os</a></li>
+    </ul>
     </nav>
 
-    <div class="header-icons" aria-label="Søg og kurv">
+    <div class="header-icons" role="group" aria-label="Søg og kurv">
       <button class="icon-button" type="button" aria-label="Søg">
-        <img src="img/Søg.png" alt="Søg ikon">
-      </button>
+  <img src="img/Søg.png" alt="" aria-hidden="true">
+</button>
 
       <button class="icon-button" type="button" aria-label="Kurv">
-        <img src="img/Kurv.png" alt="Kurv ikon">
-      </button>
+  <img src="img/Kurv.png" alt="" aria-hidden="true">
+</button>
     </div> 
     
     <button class="burger-button" type="button" aria-label="Åbn menu" aria-expanded="false">
-  <img src="img/menu-kopi.png" alt="burger ikon">
+  <img src="img/menu-kopi.png" alt="" aria-hidden="true">
 </button>
 
   </header>
 
    <main id="main-content">
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-label="LadyBalance hero-animation">
       <div class="hero-media">
-        <video autoplay muted playsinline>
-          <source src="img/Hero animation_2.mp4" type="video/mp4">
-          Din browser understøtter ikke video.
+        <video autoplay muted playsinline aria-hidden="true">
+        <source src="img/Hero animation_2.mp4" type="video/mp4">
         </video>
       </div>
     </section>
@@ -63,13 +62,12 @@
       <p>Forside / Blog / Tryg i Balance</p>
     </section>
 
-    <section class="symptomer" aria-labelledby="symptomer-title">
-  <h1 id="symptomer">Oplever du nogle af følgende symptomer i underlivet?</h1>
+   <section class="symptomer" aria-labelledby="symptomer-title">
+  <h1 id="symptomer-title">Oplever du nogle af følgende symptomer i underlivet?</h1>
 
   <div class="symptoms-animation">
     <video autoplay muted playsinline>
       <source src="img/Symptomer-_3.mp4" type="video/mp4">
-      Din browser understøtter ikke video.
     </video>
   </div>
 </section>
@@ -101,7 +99,7 @@
   </div>
 </section>
 
- <section class="guide" aria-labelledby="guide-title">
+<section class="guide" id="blog" aria-labelledby="guide-title">
       <h1 id="guide-title">5 ting alle kvinder bør vide om mælkesyrebakterier i skeden</h1>
 
       <p>
@@ -148,7 +146,7 @@
       </div>
     </section>
 
-        <section class="process" aria-labelledby="process-title">
+       <section class="process" id="faq" aria-labelledby="process-title">
       <h1 id="process-title">Hvordan kan LadyBalance fjerne symptomerne?</h1>
 
      <img src="img/Tidslinje LB.png" alt="Tidslinje for effekt af LadyBalance" class="tidslinje-image">
@@ -166,7 +164,7 @@
   </div>
 </section>
 
-<section class="mission" aria-labelledby="mission-title">
+<section class="mission" id="om-os" aria-labelledby="mission-title">
       <h1 id="mission-title"> Vi går ind for kvinders velvære og den starter med en sund pH-værdi i underlivet</h1>
 
       <img src="img/LB logo.png" alt="LadyBalance logo">
@@ -212,7 +210,7 @@
         <h2 id="support-title">Hjælp og support</h2>
         <ul>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contact">Kontakt os</a></li>
+          <li><a href="#kontakt">Kontakt os</a></li>
         </ul>
       </section>
 
@@ -222,19 +220,20 @@
           Få guide om sund balance i underlivet og rolige råd direkte i din indbakke.
         </p>
 
-        <form class="nyhedsbrev-form">
+        <form class="nyhedsbrev-form" aria-labelledby="nyhedsbrev-title">
           <label for="firstname">Navn</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Navn">
+          <input type="text" id="firstname" name="firstname" placeholder="Navn" autocomplete="given-name">
 
           <label for="lastname">Efternavn</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Efternavn">
+          <input type="text" id="lastname" name="lastname" placeholder="Efternavn" autocomplete="family-name">
 
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="E-mail">
+          <input type="email" id="email" name="email" placeholder="E-mail" autocomplete="email" required>
 
           <button type="submit">Tilmeld</button>
         </form>
       </section>
+    </div>
     </footer>
 
 <footer class="site-footer-bottom">
