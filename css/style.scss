@@ -38,11 +38,6 @@ a {
   border: 0;
 }
 
-
-// -----------------------------
-// SKIP LINK
-// -----------------------------
-
 .skip-link {
   position: absolute;
   top: -100px;
@@ -57,11 +52,6 @@ a {
     top: 1rem;
   }
 }
-
-
-// -----------------------------
-// HEADER
-// -----------------------------
 
 .site-header {
   width: 100%;
@@ -161,11 +151,6 @@ a {
   }
 }
 
-
-// -----------------------------
-// HERO
-// -----------------------------
-
 .hero {
   background-color: $primary-light;
   padding: 0;
@@ -183,10 +168,6 @@ a {
   }
 }
 
-// -----------------------------
-// BREADCRUMB
-// -----------------------------
-
 .breadcrumb {
   background-color: $primary-light;
   padding: 1rem;
@@ -195,11 +176,6 @@ a {
     font-size: 0.75rem;
   }
 }
-
-
-// -----------------------------
-// GENERELT FOR SEKTIONER
-// -----------------------------
 
 section {
   padding: 3rem 1rem;
@@ -218,11 +194,6 @@ section {
   }
 }
 
-
-// -----------------------------
-// SYMPTOMER
-// -----------------------------
-
 .symptomer {
   text-align: center;
 }
@@ -235,12 +206,6 @@ section {
     margin-top: 2.5rem;
   }
 }
-
-
-// -----------------------------
-// BALANCE INFO
-// -----------------------------
-
 
 .balance-info {
   padding-left: 0;
@@ -280,11 +245,6 @@ section {
   }
 }
 
-
-// -----------------------------
-// GUIDE
-// -----------------------------
-
 .guide {
   text-align: center;
 
@@ -304,11 +264,6 @@ section {
   @include button;
   font-size: 0.75rem;
 }
-
-
-// -----------------------------
-// PRODUKTER
-// -----------------------------
 
 .produkter {
   text-align: center;
@@ -341,11 +296,6 @@ section {
   }
 }
 
-
-// -----------------------------
-// PROCESS / TIDSLINJE
-// -----------------------------
-
 .process {
   text-align: center;
 }
@@ -356,10 +306,6 @@ section {
   margin: 0 auto;
 }
 
-
-// -----------------------------
-// ANMELDELSER
-// -----------------------------
 
 .anmeldelser {
   text-align: center;
@@ -379,11 +325,6 @@ section {
   }
 }
 
-
-// -----------------------------
-// MISSION
-// -----------------------------
-
 .mission {
   text-align: center;
 
@@ -392,11 +333,6 @@ section {
     margin: 1.5rem auto 0;
   }
 }
-
-
-// -----------------------------
-// FOOTER
-// -----------------------------
 
 .site-footer {
   background-color: $secondary-beige;
@@ -456,11 +392,6 @@ section {
   margin: 0.5rem 0;
 }
 
-
-// -----------------------------
-// NYHEDSBREV FORMULAR
-// -----------------------------
-
 .nyhedsbrev-form {
   display: flex;
   flex-direction: column;
@@ -489,11 +420,6 @@ section {
   }
 }
 
-
-// -----------------------------
-// FOOTER BOTTOM
-// -----------------------------
-
 .site-footer-bottom {
   background-color: $primary-pink;
   text-align: center;
@@ -504,11 +430,6 @@ section {
     font-size: 0.75rem;
   }
 }
-
-
-// -----------------------------
-// TABLET
-// -----------------------------
 
 @media screen and (min-width: 768px) {
 
@@ -538,6 +459,13 @@ section {
     }
   }
 
+   .button {
+    padding: 14px 40px;
+    font-size: 16px;
+    min-width: 300px;
+  }
+
+
   .produkter-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -547,11 +475,6 @@ section {
     align-items: start;
   }
 }
-
-
-// -----------------------------
-// DESKTOP
-// -----------------------------
 
 @media screen and (min-width: 1024px) {
  .site-header {
@@ -599,7 +522,6 @@ section {
     display: none;
   }
 
-  /* HERO */
   .hero-media {
    video,
     img {
@@ -611,8 +533,6 @@ section {
       display: block;
     }
   }
-
-  /* GENEREL LUFT PÅ DESKTOP */
   .symptomer,
   .guide,
   .produkter,
@@ -623,7 +543,7 @@ section {
     padding-right: 6rem;
   }
 
-  /* INTIM BALANCE SECTION */
+
   .balance-info {
     padding-left: 0;
     padding-right: 0;
@@ -637,7 +557,7 @@ section {
 
   .balance-image img {
   width: 100%;
-  height: 520px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -663,7 +583,14 @@ section {
     font-size: 1.2rem;
   }
 }
-  /* PRODUKTER */
+
+.button {
+  padding: 16px 50px;
+    font-size: 17px;
+    min-width: 340px;
+  } 
+
+
   .produkter {
     padding-top: 2rem;
   }

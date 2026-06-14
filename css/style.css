@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -436,6 +435,11 @@ section p {
     -o-object-fit: cover;
        object-fit: cover;
   }
+  .button {
+    padding: 14px 40px;
+    font-size: 16px;
+    min-width: 300px;
+  }
   .produkter-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -484,7 +488,6 @@ section p {
   .burger-button {
     display: none;
   }
-  /* HERO */
   .hero-media video,
   .hero-media img {
     width: 100%;
@@ -496,7 +499,6 @@ section p {
        object-position: center;
     display: block;
   }
-  /* GENEREL LUFT PÅ DESKTOP */
   .symptomer,
   .guide,
   .produkter,
@@ -506,7 +508,6 @@ section p {
     padding-left: 6rem;
     padding-right: 6rem;
   }
-  /* INTIM BALANCE SECTION */
   .balance-info {
     padding-left: 0;
     padding-right: 0;
@@ -518,7 +519,7 @@ section p {
   }
   .balance-image img {
     width: 100%;
-    height: 520px;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -539,7 +540,11 @@ section p {
     font-weight: 200rem;
     font-size: 1.2rem;
   }
-  /* PRODUKTER */
+  .button {
+    padding: 16px 50px;
+    font-size: 17px;
+    min-width: 340px;
+  }
   .produkter {
     padding-top: 2rem;
   }
