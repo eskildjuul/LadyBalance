@@ -1,1 +1,621 @@
 @import "partial";
+
+// -----------------------------
+// RESET
+// -----------------------------
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primary-light;
+  font-family: $body-font;
+  color: $black;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+
+// -----------------------------
+// SKIP LINK
+// -----------------------------
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: $secondary-pink;
+  color: $white;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
+
+// -----------------------------
+// HEADER
+// -----------------------------
+
+.site-header {
+  width: 100%;
+  background-color: $secondary-beige;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+    
+  img {
+    width: 95px;
+    height: auto;
+  }
+}
+
+.site-nav {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem;
+
+  img {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+
+// -----------------------------
+// HERO
+// -----------------------------
+
+.hero {
+  background-color: $primary-light;
+  padding: 0;
+  width: 100%;
+}
+
+.hero-media {
+  width: 100%;
+  height: auto;
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+// -----------------------------
+// BREADCRUMB
+// -----------------------------
+
+.breadcrumb {
+  background-color: $primary-light;
+  padding: 1rem;
+
+  p {
+    font-size: 0.75rem;
+  }
+}
+
+
+// -----------------------------
+// GENERELT FOR SEKTIONER
+// -----------------------------
+
+section {
+  padding: 3rem 1rem;
+
+  h1 {
+    @include heading;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  p {
+    font-family: $body-font;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+
+// -----------------------------
+// SYMPTOMER
+// -----------------------------
+
+.symptomer {
+  text-align: center;
+}
+
+.symptoms-animation {
+  margin: 1.5rem auto 0;
+
+  video {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+
+
+// -----------------------------
+// BALANCE INFO
+// -----------------------------
+
+
+.balance-info {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.balance-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.balance-text {
+  background-color: $primary-pink;
+  padding: 2rem 1.5rem;
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    font-family: $body-font;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+.balance-image {
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+}
+
+
+// -----------------------------
+// GUIDE
+// -----------------------------
+
+.guide {
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+    font-weight: 200rem;
+    font-size: 0.85rem;
+  }
+}
+
+.Email-ikon {
+  width: 90px;
+  margin: 0 auto 1.5rem;
+}
+
+.button {
+  @include button;
+  font-size: 0.75rem;
+}
+
+
+// -----------------------------
+// PRODUKTER
+// -----------------------------
+
+.produkter {
+  text-align: center;
+}
+
+.produkter-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+  justify-items: center;
+}
+
+.produkt-billede {
+  img {
+    width: 65%;
+    display: block;
+    margin-bottom: 1rem;
+     margin: 0 auto 1rem;
+  }
+
+  h3 {
+    font-family: $body-font;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}
+
+
+// -----------------------------
+// PROCESS / TIDSLINJE
+// -----------------------------
+
+.process {
+  text-align: center;
+}
+
+.tidslinje-image {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+// -----------------------------
+// ANMELDELSER
+// -----------------------------
+
+.anmeldelser {
+  text-align: center;
+  overflow: hidden;
+}
+
+.anmeldelser-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+
+  img {
+    min-width: 220px;
+    border: 1px solid $contrast-orange;
+    border-radius: 6px;
+  }
+}
+
+
+// -----------------------------
+// MISSION
+// -----------------------------
+
+.mission {
+  text-align: center;
+
+  img {
+    width: 120px;
+    margin: 1.5rem auto 0;
+  }
+}
+
+
+// -----------------------------
+// FOOTER
+// -----------------------------
+
+.site-footer {
+  background-color: $secondary-beige;
+  padding: 2rem 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.footer-section {
+  h2 {
+    font-family: $body-font;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+
+  p,
+  address,
+  a,
+  li {
+    font-family: $body-font;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    font-style: normal;
+  }
+
+  p,
+  address,
+  ul {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-opening-hours {
+  margin: 0.5rem 0;
+}
+
+
+// -----------------------------
+// NYHEDSBREV FORMULAR
+// -----------------------------
+
+.nyhedsbrev-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  label {
+    display: none;
+  }
+
+  input {
+    border: 1px solid $contrast-orange;
+    border-radius: 30px;
+    padding: 0.6rem 1rem;
+    font-family: $body-font;
+    font-size: 0.8rem;
+  }
+
+  button {
+    @include button;
+    align-self: center;
+    font-size: 0.75rem;
+    padding: 0.6rem 1.4rem;
+  }
+}
+
+
+// -----------------------------
+// FOOTER BOTTOM
+// -----------------------------
+
+.site-footer-bottom {
+  background-color: $primary-pink;
+  text-align: center;
+  padding: 0.5rem;
+
+  p {
+    font-family: $body-font;
+    font-size: 0.75rem;
+  }
+}
+
+
+// -----------------------------
+// TABLET
+// -----------------------------
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    padding: 0.4rem 2rem;
+  }
+
+  .site-nav {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      font-family: $body-font;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-pink;
+      }
+    }
+  }
+
+  section {
+    padding: 4rem 3rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .balance-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .balance-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .balance-image {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .produkter-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+  }
+}
+
+
+// -----------------------------
+// DESKTOP
+// -----------------------------
+
+@media screen and (min-width: 1024px) {
+   .site-header {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+
+
+  /* HERO */
+  .hero-media {
+   video,
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: none;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+  }
+
+  /* GENEREL LUFT PÅ DESKTOP */
+  .symptomer,
+  .guide,
+  .produkter,
+  .process,
+  .anmeldelser,
+  .mission {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  /* INTIM BALANCE SECTION */
+  .balance-info {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .balance-wrapper {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .balance-content {
+    width: 100%;
+  }
+
+  .balance-content img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+  }
+
+  .balance-text {
+    padding: 4rem;
+
+    p {
+      font-size: 1.2rem;
+      line-height: 2;
+      max-width: 650px;
+    }
+
+    li {
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+
+.guide {
+  p {
+    margin-bottom: 2rem;
+    font-weight: 200rem;
+    font-size: 1.2rem;
+  }
+}
+  /* PRODUKTER */
+  .produkter {
+    padding-top: 2rem;
+  }
+
+  .produkter h2 {
+    margin-bottom: 15rem;
+  }
+
+  .produkter-grid {
+    padding-top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 4rem;
+  }
+
+  .produkt-card img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
